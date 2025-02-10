@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Générateur de Devis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Générateur de Devis</h1>
+    </div>
+    <form class="form">
+      <h2>Informations</h2>
+      <div class="info-container">
+        <div class="info-block entreprise">
+          <label for="entreprise">Nom de l'entreprise:</label>
+          <input type="text" id="entreprise" value="Maximilien">
+          <label for="siret">N° SIRET:</label>
+          <input type="text" id="siret" value="xxxxxxxxx">
+        </div>
+        <div class="info-block client">
+          <label for="client">Nom du client:</label>
+          <input type="text" id="client">
+          <label for="date">Date:</label>
+          <input type="date" id="date">
+        </div>
+      </div>
+      <h2>Prestation</h2>
+      <label for="prestation">Prestation:</label>
+      <select id="prestation">
+        <option value="dev">Développement web</option>
+        <option value="design">Design graphique</option>
+        <option value="conseil">Conseil</option>
+      </select>
+      <label for="heures">Nombre d'heures:</label>
+      <input type="number" id="heures">
+      <label for="taux">Taux horaire:</label>
+      <input type="number" id="taux">
+      <label for="demande">Demande du client:</label>
+      <textarea id="demande" rows="5" cols="30"></textarea>
+      <button type="button" onclick="calculer()">Calculer</button>
+      <button type="button" onclick="telechargerDevis()">Télécharger le devis</button>
+
+    </form>
+    <div class="resultat" id="resultat"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
